@@ -1,0 +1,21 @@
+{
+  "name": "sass-hw",
+  "version": "1.0.0",
+  "description": "## Instructions",
+  "main": "index.js",
+  "scripts": {
+    "mkdirs": "mkdir -p ./dist/css && mkdir -p ./dist/js",
+    "start": "npm run watch-css && npm run watcj-css",
+    "compile-css": "sass ./src/scss/styles.scss ./dist/css/main.css",
+    "compile-css-prod": "sass ./src/scss/styles.scss ./dist/css/main.css --no-source-map --style=compressed",
+    "watch-css": "sass --watch ./src/scss/styles.scss ./dist/css/main.css",
+    "compile-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.63.0",
+    "sass": "^1.47.0"
+  }
+}
