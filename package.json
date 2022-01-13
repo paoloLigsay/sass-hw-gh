@@ -4,12 +4,15 @@
   "description": "## Instructions",
   "main": "index.js",
   "scripts": {
-    "mkdirs": "mkdir -p ./dist/css && mkdir -p ./dist/js",
-    "start": "npm run watch-css && npm run watcj-css",
+    "start": "npm run compile && npm run watch-css",
+    "compile": "npm run compile-css & npm run compile-js",
     "compile-css": "sass ./src/scss/styles.scss ./dist/css/main.css",
     "compile-css-prod": "sass ./src/scss/styles.scss ./dist/css/main.css --no-source-map --style=compressed",
     "watch-css": "sass --watch ./src/scss/styles.scss ./dist/css/main.css",
-    "compile-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife"
+    "compile-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife",
+    "compile-js-prod": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --compact",
+    "watch-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --watch",
+    "watch": "sass --watch ./src/scss/styles.scss ./dist/css/main.css & rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --watch"
   },
   "author": "",
   "license": "ISC",

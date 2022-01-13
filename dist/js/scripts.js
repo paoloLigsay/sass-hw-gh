@@ -2,7 +2,7 @@
   'use strict';
 
   function module1() {
-    console.log(1);
+    console.log(2);
   }
 
   function module2() {
