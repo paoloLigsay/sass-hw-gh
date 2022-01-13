@@ -12,6 +12,7 @@
     "compile-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife",
     "compile-js-prod": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --compact",
     "watch-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --watch",
+    "minify-watch-js": "rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --compact --watch",
     "watch": "sass --watch ./src/scss/styles.scss ./dist/css/main.css & rollup ./src/js/scripts.js --file ./dist/js/scripts.js --format iife --watch"
   },
   "author": "",
